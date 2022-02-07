@@ -17,11 +17,8 @@ const typeDefs = gql`
     books: [Book]
   }
 
-  mutation CreateBook($title: String!, $author: String!) {
-    createBook(title: $title, author: $author) {
-      title
-      author
-    }
+  type Mutation {
+    createBook(title: String, author: String): Boolean!
   }
 `;
 
