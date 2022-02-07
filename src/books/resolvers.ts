@@ -1,4 +1,4 @@
-import books from './data';
+import books from './books';
 
 const resolvers = {
   Query: {
