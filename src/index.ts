@@ -13,6 +13,9 @@ const startServer = async () => {
   const server = new ApolloServer({
     typeDefs: items.map((i) => i.typeDefs),
     resolvers: items.map((i) => i.resolvers),
+    context: ({ req }) => {
+      return { req, res: req.res };
+    },
   });
 
   await server.start();
