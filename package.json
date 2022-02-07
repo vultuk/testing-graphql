@@ -10,7 +10,9 @@
     "start:dev": "ts-node ./src/index.ts"
   },
   "dependencies": {
-    "apollo-server": "^3.6.2",
+    "apollo-server-core": "^3.6.2",
+    "apollo-server-express": "^3.6.2",
+    "express": "^4.17.2",
     "graphql": "^16.3.0"
   },
   "devDependencies": {
