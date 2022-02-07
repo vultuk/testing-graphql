@@ -18,10 +18,11 @@ const startServer = async () => {
     },
   });
 
-  await server.start();
-  server.applyMiddleware({
-    app,
-    path: '/',
+  server.start().then(() => {
+    server.applyMiddleware({
+      app,
+      path: '/',
+    });
   });
 
   await new Promise<void>((resolve) =>
